@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Colin — Hold My Toolbelt | Save Contact</title>
+<meta name="description" content="Save Colin's contact details from Hold My Toolbelt — handyman and pressure washing Dublin 18 and DLR.">
+<meta name="theme-color" content="#FF6200">
+<meta property="og:title" content="Colin — Hold My Toolbelt">
+<meta property="og:description" content="Tap to save Colin's contact to your phone. Handyman and pressure washing Dublin 18 and DLR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;background:#1A1A1A;font-family:'Barlow',sans-serif;color:#F5F5F0;overflow-x:hidden}
+body{display:flex;flex-direction:column;align-items:center;min-height:100vh;padding:0}
+
+.card{width:100%;max-width:420px;margin:0 auto;display:flex;flex-direction:column;min-height:100vh}
+
+/* Hero */
+.hero{background:#1A1A1A;padding:32px 24px 24px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:340px;height:340px;background:radial-gradient(circle,rgba(255,98,0,0.15) 0%,transparent 65%);pointer-events:none}
+
+.logo-ring{width:120px;height:120px;border-radius:50%;border:4px solid #FF6200;overflow:hidden;margin:0 auto 16px;box-shadow:0 0 0 8px rgba(255,98,0,0.15);display:flex;align-items:center;justify-content:center;background:#FFD700}
+.logo-ring img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+
+.name{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;color:#FFFFFF;letter-spacing:1px;margin-bottom:4px}
+.title{font-size:13px;font-weight:600;color:#FF6200;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px}
+.company{font-size:14px;font-weight:500;color:#FFD700;margin-bottom:4px}
+.area{font-size:12px;color:#888;letter-spacing:1px}
+
+/* Save button */
+.save-section{padding:20px 20px 0}
+.save-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px;background:#FF6200;color:white;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border:none;border-radius:12px;cursor:pointer;text-decoration:none;transition:transform 0.15s,box-shadow 0.15s;box-shadow:0 4px 20px rgba(255,98,0,0.4)}
+.save-btn:active{transform:scale(0.97);box-shadow:0 2px 10px rgba(255,98,0,0.3)}
+.save-btn svg{width:22px;height:22px;fill:white;flex-shrink:0}
+.save-hint{text-align:center;font-size:11px;color:#555;margin-top:8px;padding:0 20px}
+
+/* Action grid */
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px 20px}
+.action-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:14px 8px;background:#252525;border-radius:12px;text-decoration:none;color:#F5F5F0;transition:background 0.15s,transform 0.1s;border:.5px solid #333}
+.action-btn:active{background:#2E2E2E;transform:scale(0.97)}
+.action-icon{width:38px;height:38px;border-radius:50%;background:#FF6200;display:flex;align-items:center;justify-content:center}
+.action-icon svg{width:18px;height:18px;fill:white}
+.action-icon.whatsapp{background:#25D366}
+.action-icon.email{background:#1A73E8}
+.action-icon.web{background:#333}
+.action-label{font-size:11px;font-weight:600;color:#F5F5F0;text-transform:uppercase;letter-spacing:.5px}
+.action-value{font-size:10px;color:#888;text-align:center}
+
+/* Services */
+.section{padding:0 20px 16px}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:#FF6200;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.section-title::after{content:'';flex:1;height:1px;background:#2E2E2E}
+.services-card{background:#252525;border-radius:12px;overflow:hidden;border:.5px solid #333}
+.svc-row{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-bottom:.5px solid #2E2E2E}
+.svc-row:last-child{border-bottom:none}
+.svc-name{font-size:13px;color:#F5F5F0;font-weight:500}
+.svc-price{font-size:13px;font-weight:700;color:#FF6200}
+.combo-row{background:rgba(255,98,0,0.08);display:flex;justify-content:space-between;align-items:center;padding:10px 16px}
+.combo-label{font-size:12px;color:#FFD700;font-weight:600}
+.combo-save{font-size:10px;color:#888}
+
+/* Reviews */
+.review-band{margin:0 20px 16px;background:#252525;border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:12px;text-decoration:none;border:.5px solid #333;transition:background 0.15s}
+.review-band:active{background:#2E2E2E}
+.stars{font-size:20px;color:#FFD700;flex-shrink:0;line-height:1}
+.review-text strong{display:block;font-size:13px;color:#F5F5F0;font-weight:600;margin-bottom:2px}
+.review-text span{font-size:11px;color:#888}
+.review-arrow{margin-left:auto;color:#555;font-size:16px;flex-shrink:0}
+
+/* Areas */
+.areas-wrap{padding:0 20px 16px}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.pill{font-size:11px;padding:4px 10px;border-radius:20px;background:#252525;color:#aaa;border:.5px solid #333;font-weight:500}
+
+/* Social */
+.social-wrap{padding:0 20px 16px}
+.social-row{display:flex;gap:10px}
+.soc-btn{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;padding:12px 8px;background:#252525;border-radius:12px;text-decoration:none;border:.5px solid #333;transition:background 0.15s}
+.soc-btn:active{background:#2E2E2E}
+.soc-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.soc-icon svg{width:18px;height:18px;fill:white}
+.soc-lbl{font-size:10px;color:#888;font-weight:500}
+
+/* Tagline */
+.tagline-band{margin:0 20px 16px;background:#FF6200;border-radius:12px;padding:16px;text-align:center}
+.tagline-band p{font-size:14px;font-weight:600;color:white;line-height:1.5}
+.tagline-band small{font-size:11px;color:rgba(255,255,255,0.75);display:block;margin-top:4px;font-style:italic}
+
+/* Footer */
+.footer{margin-top:auto;padding:16px 20px 32px;text-align:center;border-top:.5px solid #252525}
+.footer p{font-size:11px;color:#555;line-height:1.6}
+.footer .quote{font-size:10px;color:#FF6200;font-style:italic;margin-top:8px}
+
+/* iOS install hint */
+.ios-hint{display:none;background:#1C3A5E;border-radius:10px;padding:12px 14px;margin:0 20px 12px;font-size:12px;color:#90CAF9;line-height:1.5;text-align:center}
+</style>
+</head>
+<body>
+<div class="card">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="logo-ring">
+      <img src="data:image/jpeg;base64,/9j/4QC8RXhpZgAASUkqAAgAAAAGABIBAwABAAAAAQAAABoBBQABAAAAVgAAABsBBQABAAAAXgAAACgBAwABAAAAAgAAABMCAwABAAAAAQAAAGmHBAABAAAAZgAAAAAAAABgAAAAAQAAAGAAAAABAAAABgAAkAcABAAAADAyMTABkQcABAAAAAECAwAAoAcABAAAADAxMDABoAMAAQAAAP//AAACoAQAAQAAAIABAAADoAQAAQAAAIABAAAAAAAA/+EOyGh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpBdHRyaWI9J2h0dHA6Ly9ucy5hdHRyaWJ1dGlvbi5jb20vYWRzLzEuMC8nPgogIDxBdHRyaWI6QWRzPgogICA8cmRmOlNlcT4KICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPgogICAgIDxBdHRyaWI6Q3JlYXRlZD4yMDI2LTA0LTIxPC9BdHRyaWI6Q3JlYXRlZD4KICAgICA8QXR0cmliOkRhdGE+eyZxdW90O2RvYyZxdW90OzomcXVvdDtEQUhIZ0FicmpoMCZxdW90OywmcXVvdDt1c2VyJnF1b3Q7OiZxdW90O1VBR1lJLTh3Rno0JnF1b3Q7LCZxdW90O2JyYW5kJnF1b3Q7OiZxdW90O0JBR1lJeFFPanFBJnF1b3Q7fTwvQXR0cmliOkRhdGE+CiAgICAgPEF0dHJpYjpFeHRJZD5kOThiMDE4YS03ZDZkLTQxMjUtOTlkYS1kNTVhNjEzMmU5ZTk8L0F0dHJpYjpFeHRJZD4KICAgICA8QXR0cmliOkZiSWQ+NTI1MjY1OTE0MTc5NTgwPC9BdHRyaWI6RmJJZD4KICAgICA8QXR0cmliOlRvdWNoVHlwZT4yPC9BdHRyaWI6VG91Y2hUeXBlPgogICAgPC9yZGY6bGk+CiAgIDwvcmRmOlNlcT4KICA8L0F0dHJpYjpBZHM+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOmRjPSdodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyc+CiAgPGRjOnRpdGxlPgogICA8cmRmOkFsdD4KICAgIDxyZGY6bGkgeG1sOmxhbmc9J3gtZGVmYXVsdCc+SG9sZCBNeSBHaXRodWIgSW1hZ2UgLSAxPC9yZGY6bGk+CiAgIDwvcmRmOkFsdD4KICA8L2RjOnRpdGxlPgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpwZGY9J2h0dHA6Ly9ucy5hZG9iZS5jb20vcGRmLzEuMy8nPgogIDxwZGY6QXV0aG9yPkNvbGluIE1hcmtzPC9wZGY6QXV0aG9yPgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczp4bXA9J2h0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8nPgogIDx4bXA6Q3JlYXRvclRvb2w+Q2FudmEgZG9jPURBSEhnQWJyamgwIHVzZXI9VUFHWUktOHdGejQgYnJhbmQ9QkFHWUl4UU9qcUE8L3htcDpDcmVhdG9yVG9vbD4KIDwvcmRmOkRlc2NyaXB0aW9uPgo8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSd3Jz8+/9sAQwAoHB4jHhkoIyEjLSsoMDxkQTw3Nzx7WF1JZJGAmZaPgIyKoLTmw6Cq2q2KjMj/y9ru9f///5vB////+v/m/f/4/9sAQwErLS08NTx2QUF2+KWMpfj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4/8AAEQgBgAGAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A2aKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoopCwXqaTaW4C0VGZh2GaYZWPtWUq8EVysnoJA6kVWLE9SaSs3ieyHyFnev94UnmJ/eFV6Kn6zLsPkLHmL/eFLvX+8KrUUfWZdg5C1kHvRVWlDMOhNUsSuqFyFmioBKw64NPEwPUYrWNaD6icWSUUBgehzRWt7khRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFIzhRzSbS1YC01pFX3NRNIW9hTK5p4jpEtQ7j2kY+wplFFcspOW5aVgooopDCiiigAooooAKKKKACiiigAooooAOnSnrKw680yiqjOUdmJpMsK6t0NOqrUiykdeRXVDEJ6SIcOxNRSKwYZBpa6U7kBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFHSoZJN3A6VE6igrsaVxzy44Xr61CTk5NRXM32eBpNpbHYVmvq8h+5Eo+pzXJadXU00ia9FYR1K5Yj5wB6AVNqSzNPuQOYygbjOBR7B3s2LmNR5ok+/Ii/U0kU8UxYRuGK9cVzVbOm2rw/vS6lXUcCqnRjCN7gpNs0Ka7rGhZ2CqO5p1YF9dNczHB/dr90f1rKlT52Nuxdl1dFOIoy3uTiov7Xkz/qkx+NRWNgbkb3JWMHHHU1fbS7YrgKwPqGrd+yg7NE+8xkOrRuQJUKe45FXwQwBUgg9CK5+7tWtZNpOVP3W9an0y6McohY/I549jSnRi480BqTvZm1WQdWlVyPLQgH3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" alt="Hold My Toolbelt Logo">
+    </div>
+    <div class="name">Colin</div>
+    <div class="title">Chief Toolbelt Holder</div>
+    <div class="company">Hold My Toolbelt</div>
+    <div class="area">DUBLIN 18 &amp; DLR</div>
+  </div>
+
+  <!-- SAVE BUTTON -->
+  <div class="save-section">
+    <a class="save-btn" id="save-btn" href="#" onclick="saveContact(event)">
+      <svg viewBox="0 0 24 24"><path d="M17 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/></svg>
+      Save Contact to Phone
+    </a>
+    <p class="save-hint" id="save-hint">Tap to save Colin's number, email &amp; website directly to your contacts</p>
+    <div class="ios-hint" id="ios-hint">
+      📲 On iPhone: tap the button above, then tap <strong>Allow</strong> when prompted to save the contact.
+    </div>
+  </div>
+
+  <!-- ACTION BUTTONS -->
+  <div class="actions">
+    <a class="action-btn" href="tel:+353851481501">
+      <div class="action-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"/><path d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.085-1.393l-4.065-3.694z"/></svg>
+      </div>
+      <span class="action-label">Call Colin</span>
+      <span class="action-value">085 148 1501</span>
+    </a>
+    <a class="action-btn" href="https://wa.me/353851481501?text=Hi%20Colin%2C%20I%27d%20like%20a%20quote%20from%20Hold%20My%20Toolbelt">
+      <div class="action-icon whatsapp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <span class="action-label">WhatsApp</span>
+      <span class="action-value">Tap to message</span>
+    </a>
+    <a class="action-btn" href="mailto:hello@holdmytoolbelt.ie">
+      <div class="action-icon email">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </div>
+      <span class="action-label">Email</span>
+      <span class="action-value">hello@holdmytoolbelt.ie</span>
+    </a>
+    <a class="action-btn" href="https://holdmytoolbelt.ie">
+      <div class="action-icon web">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      </div>
+      <span class="action-label">Website</span>
+      <span class="action-value">holdmytoolbelt.ie</span>
+    </a>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="section">
+    <div class="section-title">Services &amp; Pricing</div>
+    <div class="services-card">
+      <div class="svc-row"><span class="svc-name">Driveway pressure washing</span><span class="svc-price">€180</span></div>
+      <div class="svc-row"><span class="svc-name">Patio &amp; decking wash</span><span class="svc-price">€130</span></div>
+      <div class="combo-row"><span class="combo-label">🔥 Combo deal — driveway + patio</span><span class="svc-price">€280</span></div>
+      <div class="svc-row"><span class="svc-name">Flat-pack assembly</span><span class="svc-price">From €80</span></div>
+      <div class="svc-row"><span class="svc-name">TV wall mounting</span><span class="svc-price">€110</span></div>
+      <div class="svc-row"><span class="svc-name">Handyman &amp; odd jobs</span><span class="svc-price">€80/hr</span></div>
+    </div>
+    <p style="font-size:11px;color:#555;margin-top:8px;text-align:center">Card accepted on-site · 20% deposit to confirm booking · Payment on completion</p>
+  </div>
+
+  <!-- REVIEWS -->
+  <a class="review-band" href="GOOGLE_REVIEW_LINK_HERE" target="_blank">
+    <div class="stars">★★★★★</div>
+    <div class="review-text">
+      <strong>Rated 5.0 on Google</strong>
+      <span>Tap to read reviews or leave one of your own</span>
+    </div>
+    <div class="review-arrow">›</div>
+  </a>
+
+  <!-- AREAS -->
+  <div class="areas-wrap">
+    <div class="section-title">Areas We Cover</div>
+    <div class="pills">
+      <span class="pill">Foxrock</span><span class="pill">Sandyford</span><span class="pill">Cabinteely</span>
+      <span class="pill">Stillorgan</span><span class="pill">Dún Laoghaire</span><span class="pill">Killiney</span>
+      <span class="pill">Leopardstown</span><span class="pill">Goatstown</span><span class="pill">Dundrum</span>
+      <span class="pill">Rathfarnham</span><span class="pill">Blackrock</span><span class="pill">Dalkey</span>
+      <span class="pill">Shankill</span><span class="pill">Glenageary</span><span class="pill">Monkstown</span>
+    </div>
+  </div>
+
+  <!-- SOCIAL -->
+  <div class="social-wrap">
+    <div class="section-title">Find Us Online</div>
+    <div class="social-row">
+      <a class="soc-btn" href="https://facebook.com/holdmytoolbelt" target="_blank">
+        <div class="soc-icon" style="background:#1877F2">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </div>
+        <span class="soc-lbl">Facebook</span>
+      </a>
+      <a class="soc-btn" href="https://instagram.com/holdmytoolbelt" target="_blank">
+        <div class="soc-icon" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </div>
+        <span class="soc-lbl">Instagram</span>
+      </a>
+      <a class="soc-btn" href="GOOGLE_REVIEW_LINK_HERE" target="_blank">
+        <div class="soc-icon" style="background:#4285F4">
+          <svg viewBox="0 0 24 24" fill="white"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </div>
+        <span class="soc-lbl">Google</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- TAGLINE -->
+  <div class="tagline-band">
+    <p>We show up. We sort it.<br>You don't have to think about it again.</p>
+    <small>"Your husband said he'd get to it. He won't. We will."</small>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>holdmytoolbelt.ie · hello@holdmytoolbelt.ie<br>Dublin 18 &amp; Dún Laoghaire-Rathdown</p>
+    <p class="quote">"The man who moves a mountain begins by carrying away small stones." — Confucius</p>
+    <p style="margin-top:8px;font-size:10px;color:#444">© 2025 Hold My Toolbelt · Fully insured · All rights reserved</p>
+  </div>
+
+</div>
+
+<script>
+// vCard data embedded directly — no external file needed
+var VCARD = `BEGIN:VCARD
+VERSION:3.0
+FN:Colin - Hold My Toolbelt
+ORG:Hold My Toolbelt
+TITLE:Chief Toolbelt Holder
+TEL;TYPE=CELL:+353851481501
+EMAIL:hello@holdmytoolbelt.ie
+URL:https://holdmytoolbelt.ie
+ADR;TYPE=WORK:;;;Dublin 18;;;Ireland
+NOTE:Handyman and pressure washing across Dublin 18 and DLR. We show up. We sort it.
+END:VCARD`;
+
+function isIOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+function isAndroid() {
+  return /Android/.test(navigator.userAgent);
+}
+
+function saveContact(e) {
+  e.preventDefault();
+
+  try {
+    var blob = new Blob([VCARD], {type: 'text/vcard;charset=utf-8'});
+    var url = URL.createObjectURL(blob);
+
+    if (isIOS()) {
+      // iOS — open in new tab which triggers contact save prompt
+      window.location.href = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(VCARD);
+    } else {
+      // Android and desktop — standard download
+      var a = document.createElement('a');
+      a.style.display = 'none';
+      a.href = url;
+      a.download = 'colin-holdmytoolbelt.vcf';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function() {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 1000);
+    }
+
+    // Update button feedback
+    var btn = document.getElementById('save-btn');
+    var originalHTML = btn.innerHTML;
+    btn.innerHTML = '<svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Contact saved!';
+    btn.style.background = '#1D9E75';
+    setTimeout(function() {
+      btn.innerHTML = originalHTML;
+      btn.style.background = '#FF6200';
+    }, 3000);
+
+  } catch(err) {
+    // Fallback — show instructions
+    document.getElementById('ios-hint').style.display = 'block';
+  }
+}
+
+// Show iOS-specific hint proactively
+if (isIOS()) {
+  document.getElementById('save-hint').textContent = 'Tap to save — your phone will ask permission to add the contact';
+}
+</script>
+</body>
+</html>
