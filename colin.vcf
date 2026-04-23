@@ -1,10 +1,10 @@
 BEGIN:VCARD
-VERSION:3.0
-FN:Colin-Hold My Tool Belt-Handyman
+VERSION:3.0;
+FN:Colin Hold My Tool Belt-Handyman
 ORG:Hold My Tool Belt
 TITLE:Chief Tool Belt Holder-Handyman
-TEL;TYPE=CELL:+353851481501
-EMAIL:hello@holdmytoolbelt.ie
+TEL;TYPE=CELL;type=pref:+353(0)851481501
+EMAIL;type=pref:hello@holdmytoolbelt.ie
 URL:https://holdmytoolbelt.ie
 ADR;TYPE=WORK:;;Dún Laoghaire–Rathdown;Dublin;;;Ireland
 NOTE:Handyman and pressure washing across South Dublin and Dún Laoghaire–Rathdown. We show up. We sort it.
